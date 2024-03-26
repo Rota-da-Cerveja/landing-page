@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  button{
+    @apply text-xl;
+    @apply  flex-auto;
+    @apply bg-primary;
+    @apply px-btx;
+    @apply py-bty;
+    font-family: "Work Sans", sans-serif;
+    width: max-content;
+    align-self: center;
+  }
+
+  h2{
+    font-size: 2.375rem;
+    font-family: "Work Sans", sans-serif;
+    font-style: italic;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  h3{
+    font-size: 1.25rem;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    line-height: 23px;
+  }
+}

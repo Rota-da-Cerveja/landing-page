@@ -1,6 +1,7 @@
 import Image from "next/image";
 import background from "../../public/CervejaEspumanteNoBalcaoDoBar.png";
 import logo from "../../public/logo.png";
+import facebook from "../../public/facebook.png";
 
 export default function Home() {
   return (
@@ -30,7 +31,9 @@ export default function Home() {
         </section>
         <section id="footer_social" className="mt-4 p-4 bg-dark text-white text-right">
             <h1 className="">social </h1>
-            <a className="text-[#ffa500]"  href="#">facebook | </a>
+            <a href="https://www.facebook.com/" target="_blank"> 
+            <Image src={facebook} alt="facebook"></Image>
+            </a>
             <a className="text-[#ffa500]" href="#">instagram | </a>
             <a className="text-[#ffa500]"  href="#">x</a>
         </section>

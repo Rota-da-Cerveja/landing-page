@@ -21,6 +21,46 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <footer className="bg-[#000000] text-[#ffffff]">
+      <Image src={background} alt="background"></Image>
+        <section id="footer_download" className="mt-4 p-4 bg-dark text-white text-center">
+            <h1  className=""> em breve</h1>
+            <button>app store</button>  
+            <button>play store</button>  
+        </section>
+        <section id="footer_social" className="mt-4 p-4 bg-dark text-white text-right">
+            <h1 className="">social </h1>
+            <a className="text-[#ffa500]"  href="#">facebook | </a>
+            <a className="text-[#ffa500]" href="#">instagram | </a>
+            <a className="text-[#ffa500]"  href="#">x</a>
+        </section>
+        <section id="footer_sobre" className="flex min-w-screen">
+            <div>
+                <h5 className="" >sobre</h5>
+                <h5 className="" >fornecedores</h5>
+            </div>
+            <div className="mt-4 p-4 bg-dark text-white text-center">
+                <h5 className="">suporte</h5>
+                <p className="">perguntas frequentes</p>
+                <p className="">contate-nos</p>
+            </div>
+            <div className="mt-0 p-4 bg-dark text-white text-right">
+                <h5 className="">parcerias</h5>
+                <p className="">quero ser parceiro</p>
+            </div>
+        </section>
+        <section id="footer_info">
+            <div>
+                <a className="" href="#">política de privacidade | </a>
+                <a className="" href="#">termos de uso | </a>
+                <a className="" href="#">cookies | </a>
+                <a className="" href="#">acessibilidade</a>
+            </div>
+            <div className="m-5 p-4 bg-dark text-white text-right">
+                <a className="" href="#">beba com moderação</a>
+            </div>
+        </section>
+      </footer>
     </>
   );
 }

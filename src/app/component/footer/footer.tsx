@@ -25,13 +25,13 @@ export function Footer() {
     <section className="container my-7 grid grid-cols-4 grid-rows-3 gap-4">
           <Image src={logo} alt="background" width={125} className="self-center justify-self-center"></Image>
         <div className="grid grid-cols-2 justify-self-center col-span-2 col-start-2 gap-y-2 gap-x-5 w-max uppercase font-black">
-              <h1 className={[inter.className, " col-span-2 justify-self-center w-max"]}>em breve</h1>
+              <h1 className={inter.className+" col-span-2 justify-self-center w-max"}>em breve</h1>
             <StoreButton title={"App Store"} icon={appStoreIcon}></StoreButton>
             <StoreButton title={"Google Play"} icon={playStoreIcon}></StoreButton>
         </div>
 
         <div className="grid grid-cols-3 justify-self-center self-center col-start-4 row-span-2 h-max gap-y-2 gap-x-5 w-max uppercase font-black">
-            <h1 className={[inter.className," col-span-3 justify-self-center w-max"]}>Social</h1>
+            <h1 className={inter.className+" col-span-3 justify-self-center w-max"}>Social</h1>
             <Social src={facebook}></Social>
             <Social src={instagram}></Social>
             <Social src={twitterx}></Social>
@@ -53,43 +53,5 @@ export function Footer() {
         </div>
         <p className="col-start-4 tracking-wider font-medium justify-self-center self-end text-xs text-white">© {currentYear} {packageJson.org}</p>
     </section>
-    {/* <section id="footer_download" className="mt-4 p-4 bg-dark text-white text-center">
-        <button>app store</button>  
-        <button>play store</button>  
-    </section> */}
-    {/* <section id="footer_social" className="mt-4 p-4 bg-dark text-white text-right">
-        <h1 className="">social </h1>
-        <a href="https://www.facebook.com/" target="_blank"> 
-        <Image src={facebook} alt="facebook"></Image>
-        </a>
-        <a className="text-[#ffa500]" href="#">instagram | </a>
-        <a className="text-[#ffa500]"  href="#">x</a>
-    </section>
-    <section id="footer_sobre" className="flex min-w-screen">
-        <div>
-            <h5 className="" >sobre</h5>
-            <h5 className="" >fornecedores</h5>
-        </div>
-        <div className="mt-4 p-4 bg-dark text-white text-center">
-            <h5 className="">suporte</h5>
-            <p className="">perguntas frequentes</p>
-            <p className="">contate-nos</p>
-        </div>
-        <div className="mt-0 p-4 bg-dark text-white text-right">
-            <h5 className="">parcerias</h5>
-            <p className="">quero ser parceiro</p>
-        </div>
-    </section>
-    <section id="footer_info">
-        <div>
-            <a className="" href="#">política de privacidade | </a>
-            <a className="" href="#">termos de uso | </a>
-            <a className="" href="#">cookies | </a>
-            <a className="" href="#">acessibilidade</a>
-        </div>
-        <div className="m-5 p-4 bg-dark text-white text-right">
-            <a className="" href="#">beba com moderação</a>
-        </div>
-    </section> */}
   </footer>);
 }

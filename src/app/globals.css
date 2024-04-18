@@ -32,16 +32,15 @@ body {
   }
 }
 
+.main{
+  background-size: auto 100%;
+  background-position: 47% 0;
+}
+
 @layer base {
   button{
-    @apply text-xl;
-    @apply  flex-auto;
-    @apply bg-primary;
-    @apply px-btx;
-    @apply py-bty;
     font-family: "Work Sans", sans-serif;
-    width: max-content;
-    align-self: center;
+
   }
 
   h2{

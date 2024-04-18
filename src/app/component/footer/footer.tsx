@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../../../public/logo.png"
+import logo from "../../../../public/logo.webp"
 import { Inter } from "next/font/google";
 import { StoreButton } from "../button/store/Store";
 import playStoreIcon from "../../../../public/icon/google-play.svg";
@@ -22,36 +22,48 @@ export function Footer() {
     const currentYear = new Date().getFullYear();
 
   return (<footer className="bg-black text-white flex justify-center">
-    <section className="container my-7 grid grid-cols-4 grid-rows-3 gap-4">
-          <Image src={logo} alt="background" width={125} className="self-center justify-self-center"></Image>
-        <div className="grid grid-cols-2 justify-self-center col-span-2 col-start-2 gap-y-2 gap-x-5 w-max uppercase font-black">
+    <section className="container p-5 grid grid-cols-4 grid-rows-6 gap-x-2">
+          <Image src={logo} alt="background" className="w-[80px] self-center col-start-1 justify-self-center"></Image>
+        <div className="grid grid-cols-2 w-full row-start-2 justify-self-center col-span-4 col-start-1 uppercase font-black gap-y-1 gap-x-3">
               <h1 className={inter.className+" col-span-2 justify-self-center w-max"}>em breve</h1>
             <StoreButton title={"App Store"} icon={appStoreIcon}></StoreButton>
             <StoreButton title={"Google Play"} icon={playStoreIcon}></StoreButton>
         </div>
-
-        <div className="grid grid-cols-3 justify-self-center self-center col-start-4 row-span-2 h-max gap-y-2 gap-x-5 w-max uppercase font-black">
-            <h1 className={inter.className+" col-span-3 justify-self-center w-max"}>Social</h1>
-            <Social src={facebook}></Social>
-            <Social src={instagram}></Social>
-            <Social src={twitterx}></Social>
-        </div>
-        <div className="uppercase text-sm font-black flex col-start-2 row-start-2 flex-col justify-around">
+        <div className="uppercase pt-5 text-sm font-black flex col-start-1 row-span-3 col-span-2 items-self-center row-start-3 flex-col gap-2">
           <a>Sobre</a>    
           <a>Suporte</a>
           <a>Fornecedores</a>
         </div>
-        <div className="font-light flex flex-col gap-2 col-start-3 row-start-2">
+
+        <div className="col-span-2 pt-5 row-span-2 font-light flex flex-col gap-2 col-start-3 row-start-3">
           <h1 className="font-black">PARCERIAS</h1>
-          <p>QUERO SER PARCEIRO</p>
+          <p>Quero ser parceiro</p>
         </div>
-        <div className="flex justify-around col-span-2 row-start-3 font-medium tracking-wider self-end text-xs text-white">
+        <div className="flex justify-self-center self-center col-start-3 row-start-5 col-span-3 h-max w-max uppercase font-black">
+            <h1 className={inter.className+" col-span-3 hidden justify-self-center w-max"}>Social</h1>
+            <Social src={facebook}></Social>
+            <Social src={instagram}></Social>
+            <Social src={twitterx}></Social>
+        </div>
+        <div className="row-start-6 col-span-4 col-start-1 font-medium tracking-wider justify-start self-end text-xs text-white">
+          <div className="flex gap-3 mb-3">
             <a>Política de Privacidade</a>
-            <a>Termos de Uso</a>
+            <a className="flex-1">Termos de Uso</a>
+          </div>
+          <div className="flex gap-3">
             <a>Cookies</a>
+            <a className="flex-1">Acessibilidade</a>
+            <p className="tracking-wider font-medium text-xs text-white">© {currentYear} {packageJson.org}</p>
+          </div>
+          {/* <div className="flex gap-2">
+            
+          </div>
+          <div className="col-start-1 row-start-2 flex gap-2 self-end">
+            
             <a>Acessibilidade</a>
+          </div>
+          <p className="col-start-3 row-start-2 col-span-2 tracking-wider font-medium justify-self-center self-end text-xs text-white">© {currentYear} {packageJson.org}</p> */}
         </div>
-        <p className="col-start-4 tracking-wider font-medium justify-self-center self-end text-xs text-white">© {currentYear} {packageJson.org}</p>
     </section>
   </footer>);
 }

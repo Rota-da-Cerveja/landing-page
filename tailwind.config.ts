@@ -9,7 +9,15 @@ const config: Config = {
   ],
   theme: {
     colors:{
-      primary: '#FE7817',
+      primary: {
+        100: '#F2B705',
+        200: '#F28F16',
+        500: '#D9601A',
+        700: '#BF2B0A',
+        900: '#8C0303',
+      },
+      transparent: 'transparent',
+      current: 'currentColor',
       black: '#000000',
       white: '#ffffff'
     },
@@ -27,7 +35,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       boxShadow: {
-        "inner": "-250px 0px 98px 0px rgba(0,0,0, 1) inset"
+        "inner": "-75px 0px 98px 0px rgba(0,0,0, 1) inset"
       }
     },
   },

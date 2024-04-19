@@ -1,35 +1,28 @@
 import Image from "next/image";
-import logo from "../../public/logo.webp";
-import background from "../../public/08816ac6f52163f995c552cd673ee601.webp";
 import { Footer } from "./component/footer/footer";
+import { image } from "./component/assets/image";
 
 export default function Home() {
   return (
     <>
       <main
-        className="main flex bg-black bg-cover bg-right-bottom justify-center h-screen w-full bg-no-repeat text-white"
-        style={{ backgroundImage: "url('" + background.src + "')" }}>
-          <div className="container m-4 md:mt-20 mt-14">
-            <h2 className="text-xl mb-4 md:mb-16 md:text-3xl">
+        className="main flex bg-black bg-cover bg-left-top justify-center h-screen w-screen bg-no-repeat text-white"
+        style={{ backgroundImage: "url('" + image.background.src + "')" }}>
+           <div className="container m-4 md:mt-20 mt-14 h-3/5 flex flex-col justify-between">
+            <h2 className="text-xl md:text-3xl z-10 relative">
               As melhores cervejas artesanais da sua região?
             </h2>
-            <Image src={logo} alt="Logo" className="w-60 mb-4 md:mb-16 md:w-[60%]"></Image>
-            <h3 className="w-64 text-base md:text-2xl md:w-[65%] font-bold">
+            <Image src={image.logo} alt="Logo" className="w-60 md:w-[60%] z-10 relative"></Image>
+            <h3 className="w-64 text-base md:text-2xl md:w-[65%] font-bold z-10 relative">
               O aplicativo desenvolvido para você ter a melhor experiência cervejeira possível.
             </h3>
-            <button className="bg-primary-700 py-4 md:py-8 px-7 md:px-14 mt-10 text-base md:text-3xl rounded">Quero Conhecer a Rota</button>
-          </div>
-        {/* <div className="w-1/2 bg-red-500 flex justify-center items-center">
-          <div className="flex flex-col gap-[20px]">
-            <h2 className="max-w-[522px]">
-              As melhores cervejas artesanais da sua região?
-            </h2>
-            <h3 className="max-w-[522px]">
-              O aplicativo desenvolvido para você ter a melhor experiência cervejeira possível.
-            </h3>
+            <button className="bg-primary-700 py-4 md:py-8 px-7 w-[75%] md:px-14 text-base md:text-3xl rounded z-10 relative">Quero Conhecer a Rota</button>
             
-          </div>
-        </div> */}
+          </div> 
+          <div className="absolute bg-cover h-[calc(100vh-3.5rem)] md:h-[calc(100vh-5rem)] left-2/3 w-[calc(100vw-66.666667%)] -bottom-2 z-0"
+            style={{ backgroundImage: "url('" + image.glass.src + "')" }}
+          ></div>
+          {/* <Image src={image.glass} alt={""} className="absolute h-[calc(100vh-3.5rem)] md:h-[calc(100vh-5rem)] left-2/3 -bottom-2 z-0"></Image> */}
       </main>
 
       <Footer></Footer>

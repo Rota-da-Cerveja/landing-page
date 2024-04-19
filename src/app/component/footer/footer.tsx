@@ -2,12 +2,7 @@ import Image from "next/image";
 import logo from "../../../../public/logo.webp"
 import { Inter } from "next/font/google";
 import { StoreButton } from "../button/store/Store";
-import playStoreIcon from "../../../../public/icon/google-play.svg";
-import appStoreIcon from "../../../../public/icon/app-store.svg";
-
-import facebook from "../../../../public/icon/facebook-fill.svg";
-import instagram from "../../../../public/icon/instagram-line.svg";
-import twitterx from "../../../../public/icon/twitter-x-fill.svg";
+import { playStoreIcon, appStoreIcon, facebook, twitterx, instagram } from "../icon/Icon";
 import { Social } from "../button/social/Social";
 import path from "path";
 import fs from 'fs';

@@ -26,16 +26,14 @@ const config: Config = {
         btx: '69px',
         bty: '19px',
       },
-      fontFamily: {
-        display: ["Work Sans"],
-      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       boxShadow: {
-        "inner": "-75px 0px 98px 0px rgba(0,0,0, 1) inset"
+        "inner": "-1px 8px 400px -1px rgba(0,0,0,0.75) inset;",
+        "footer": "-1px -26px 38px 6px rgba(0,0,0,1);"
       }
     },
   },

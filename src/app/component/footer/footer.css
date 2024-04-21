@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    
+    .footer-wrapper{
+        @apply bg-black text-white flex justify-center shadow-footer relative
+    }
+
+    .footer-container{
+        /* sm */
+        @apply container p-5 grid grid-cols-4 grid-rows-6 gap-x-2;
+        /* md */
+        @apply md:gap-x-2 md:gap-y-2;
+        /* lg */
+        @apply lg:grid-rows-4;
+    }
+
+    .footer-logo {
+       /* sm */
+       @apply w-[80px] self-center row-start-1 col-start-1 justify-self-center;
+       /* lg */
+       @apply lg:justify-self-start;
+    }
+
+        /* sm */
+        /* md */
+        /* lg */
+        /* landscape*/
+        /* xl */
+        /* 2xl */
+
+    .footer-content{
+        /* sm */
+        @apply grid grid-cols-2 row-start-2 justify-self-center col-span-4 w-max col-start-1 uppercase font-black gap-y-1 gap-x-3 ;
+        /* md */
+        @apply md:col-span-4 md:col-start-1;
+        /* lg */
+        @apply lg:col-start-1 lg:row-start-1;
+    }
+
+    .footer-heading{
+        @apply col-span-2 justify-self-center font-black;
+    }
+
+    .footer-heading-center{
+        @apply footer-heading w-full text-center;
+    }
+
+    .footer-links{
+        /* sm */
+        @apply uppercase pt-5 text-sm font-black flex col-start-1 row-span-3 col-span-2 row-start-3 flex-col gap-2;
+        /* md */
+        @apply md:col-span-1 md:col-start-2;
+        /* lg */
+        @apply lg:w-min lg:justify-self-center lg:row-start-2 lg:row-span-2;
+    }
+
+    .footer-partnerships{
+        /* sm */
+        @apply  col-span-2 pt-5 row-span-2 font-light flex flex-col gap-2 col-start-3 row-start-3;
+        /* md */
+        @apply md:row-span-3 md:col-start-3 md:col-span-1;
+        /* lg */
+        @apply lg:w-max lg:justify-self-center lg:row-span-2;
+    }
+
+    .footer-social{
+        /* sm */
+        @apply flex flex-wrap justify-around justify-self-center self-center col-start-3 row-start-5  col-span-2 uppercase font-black ;
+        /* md */
+        @apply md:row-start-1;
+        /* lg */
+        @apply lg:col-start-4 lg:col-span-1 lg:justify-self-end;
+    }
+  }

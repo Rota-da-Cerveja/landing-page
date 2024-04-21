@@ -26,6 +26,10 @@ const config: Config = {
         btx: '69px',
         bty: '19px',
       },
+      aspectRatio: {
+        'half-glass': '320 / 1600',
+        'glass': '740 / 1600',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

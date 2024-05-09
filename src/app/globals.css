@@ -24,6 +24,12 @@ body {
   outline: 0;
 }
 
+@keyframes infinite {
+	100% {
+		transform: translateX(calc(-180px * 12));
+	}
+}
+
 
 @layer utilities {
   .text-balance {

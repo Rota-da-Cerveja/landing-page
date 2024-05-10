@@ -4,8 +4,12 @@
 
 @layer components{
     
+    .highway-title{
+        @apply text-3xl capitalize text-center py-16 tracking-wider bg-black font-black text-white;
+    }
+
     .highway-container {
-        @apply container overflow-hidden relative shadow-highway;
+        @apply container overflow-hidden relative shadow-highway bg-black;
         /* after */
         @apply after:content-['_'] after:absolute after:z-10 after:h-full after:w-[var(--caroucel-shadow-size,180px)] after:top-0 after:right-0 after:bg-shadow-left;
         /* before */
@@ -13,7 +17,7 @@
     }
 
     .highway-wrapper{
-        @apply flex justify-center w-full h-[calc(calc(3_/_5)*var(--caroucel-width,250px))];
+        @apply flex justify-center w-full h-[calc(calc(3_/_5)*var(--caroucel-width,250px))] bg-black;
     }
     
     .highway-lane{
@@ -21,6 +25,6 @@
     }
     
     .highway-element{
-        @apply flex-1 aspect-logo flex justify-center items-center animate-[infinite_var(--caroucel-animate-timing,5s)_linear_infinite];
+        @apply flex-1 aspect-logo flex justify-center items-center animate-[infinite_var(--caroucel-animate-timing,50s)_linear_infinite];
     }
 }

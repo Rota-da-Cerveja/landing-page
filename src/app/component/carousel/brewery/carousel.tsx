@@ -25,9 +25,14 @@ import img21 from "../../../../../public/developer/patrlou_gray_5:3.png";
 import img22 from "../../../../../public/developer/grunsbeir_gray_5:3.png";
 import img23 from "../../../../../public/developer/doutorado-do-chopp_gray_5:3.png";
 import img24 from "../../../../../public/developer/babylon_gray_5:3.png";
+import img25 from "../../../../../public/developer/seispunhos_gray_5:3.png";
 
 import Image, { StaticImageData } from "next/image";
 import Brewery from "../../../entity/brewery";
+
+import { Bebas_Neue } from "next/font/google"
+
+const bebas_Neue = Bebas_Neue({ subsets: ["latin"], weight: '400'});
 
 type CarouselProps = {
     breweries?: Brewery[];
@@ -35,22 +40,34 @@ type CarouselProps = {
 
 export const BreweryCarousel: React.FunctionComponent<CarouselProps> = (props: CarouselProps) => {
 
-    const imgs: StaticImageData[] = [ img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12];
+    const imgs: StaticImageData[] = [img1 ,img2 ,img3 ,img4 ,img5 ,img6 ,img7 ,img8 ,img9 ,img10 ,img11 ,img12 ,img13 ,img14 ,img15 ,img16 ,img17 ,img18 ,img19 ,img20 ,img21 ,img22 ,img23 ,img24 ,img25];
 
-
+    const currentImgs: StaticImageData[] = getRandomElements(imgs, 6);
     
-    return (<div id="infinite" className="highway-wrapper">
+    return (<>
+    <h1 className={"highway-title "+bebas_Neue.className}>Cervejarias parceiras</h1>
+    <div id="infinite" className="highway-wrapper">
         <div className="highway-container">
             <ul className="highway-lane">
                 {
                     [...(new Array(12))].map((_, i) => {
                         return <li className="highway-element" key={i}>
-                            <Image src={imgs[i%6].src} alt="" width={250} height={150}></Image>
+                            <Image src={currentImgs[i%6].src} alt="" width={250} height={150}></Image>
                         </li>;
                     })
                 }
 
             </ul>
         </div>
-    </div>);
+    </div></>);
+}
+
+
+function getRandomElements<T>(arr: T[], count: number): T[] {
+    let shuffled = [...arr];
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled.slice(0, count);
 }

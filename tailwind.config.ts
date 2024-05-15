@@ -50,7 +50,7 @@ const config: Config = {
       boxShadow: {
         "inner": "rgba(0, 0, 0, 1) 0px -26px 38px 6px inset;",
         "footer": "-1px -26px 38px 6px rgba(0,0,0,1);",
-        'highway': "0 3px 10px -3px rgba(0, 0, 0, 0.3)",
+        'carousel': "0 3px 10px -3px rgba(0, 0, 0, 0.3)",
       }
     },
   },

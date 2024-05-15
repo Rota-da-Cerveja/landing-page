@@ -12,11 +12,11 @@
     .about-description{
     }
     .about-container{
-        @apply  [&>*:nth-child(2n)]:flex-row-reverse;
+        /* @apply  [&>*:nth-child(2n)]:flex-row-reverse; */
     }
     .about-paragraph-container{
         text-shadow: 1px 1px 2px #000000;
-        @apply container text-white text-xl flex gap-24 px-24 items-center indent-10;
+        @apply container text-white md:text-xl flex md:gap-24 px-4 md:px-24 items-center indent-10 flex-col-reverse text-base;
     }
     .about-paragraph-container img{
         @apply drop-shadow-xl;

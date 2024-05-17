@@ -6,7 +6,7 @@ import Image, { StaticImageData } from "next/image";
 export type Paragraph = {
     text: string;
     image: StaticImageData;
-    description?: string; 
+    description?: string;
 }
 
 type AboutProps = {
@@ -33,6 +33,8 @@ const ParagraphComponent: React.FunctionComponent<Paragraph> = (props: Paragraph
         <p className="about-description">
             {props.text}
         </p>
-        <Image src={props.image.src} alt={props.description || ""} width={props.image.width} height={props.image.height}></Image>
+        <div className="about-image-container">
+            <Image className="about-image" src={props.image.src} alt={props.description || ""} width={props.image.width} height={props.image.height}></Image>
+        </div>
     </div>);
 }

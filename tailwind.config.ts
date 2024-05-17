@@ -8,7 +8,7 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors:{
+    colors: {
       primary: {
         100: '#F2B705',
         200: '#F28F16',
@@ -50,7 +50,9 @@ const config: Config = {
       boxShadow: {
         "inner": "rgba(0, 0, 0, 1) 0px -26px 38px 6px inset;",
         "footer": "-1px -26px 38px 6px rgba(0,0,0,1);",
-        'carousel': "0 3px 10px -3px rgba(0, 0, 0, 0.3)",
+        "carousel": "0 3px 10px -3px rgba(0, 0, 0, 0.3)",
+        "legal": "0 2px 4px rgba(0, 0, 0, 0.1)"
+
       }
     },
   },

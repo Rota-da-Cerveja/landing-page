@@ -7,11 +7,11 @@ export default function Header () {
     <header className='header-wrapper'  style={{ backgroundImage: "url('" + image.background.src + "')" }}>
       <div className="header-container">
         <h2 className="header-heading">
-          As melhores cervejas artesanais da sua região?
+          As melhores cervejas artesanais da sua região!
         </h2> 
         <Image src={image.logo} alt="Logo" className="header-logo"></Image>
         <h3 className="header-heading">
-          O aplicativo desenvolvido para você ter a melhor experiência cervejeira possível.
+          O aplicativo desenvolvido para você ter a melhor experiência cervejeira.
         </h3>
         <div className="header-container-button">
           <button className="header-button">Quero Conhecer a Rota</button>

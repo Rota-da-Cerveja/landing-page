@@ -11,7 +11,7 @@ const handle = async (req: NextApiRequest, res: NextApiResponse) => {
         console.log(response.data);
         res.send(response.data);
     } catch (error) {
-        res.status(500).json({ error: 'Erro interno do servidor' });
+        res.status(200).json({  breweries: [] });
     }
 
 }

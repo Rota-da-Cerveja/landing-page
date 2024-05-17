@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scale-up-ver-top {
+  0% {
+    transform: scaleY(0.4);
+    transform-origin: 100% 0%;
+    opacity: 0;
+    display: block;
+  }
+
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@layer components {
+  .legal-section-container {
+    @apply w-full bg-white p-5 shadow-legal;
+  }
+
+  .legal-section-title {
+    @apply text-xl flex gap-3 cursor-pointer;
+  }
+
+  .legal-section-title span {
+    @apply flex-1;
+  }
+
+  .legal-section-title-arrow-icon {
+    @apply transition-all;
+  }
+
+  .legal-section-description-hidden {
+    @apply animate-[scale-up-ver-top_0.4s_ease-in-out_both];
+
+  }
+}

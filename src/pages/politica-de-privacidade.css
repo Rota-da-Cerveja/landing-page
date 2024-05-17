@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .privacy-policy-wrapper{
+    @apply w-full flex justify-center;
+  }
+  .privacy-policy-container{
+    @apply container flex flex-col gap-8 my-8;
+  }
+  body{
+    @apply bg-[#f4f4f4];
+  }
+}

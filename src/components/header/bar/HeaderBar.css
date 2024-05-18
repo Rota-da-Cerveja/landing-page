@@ -3,5 +3,16 @@
 @tailwind utilities;
 
 @layer components {
-  
+  .header-bar-wrapper{
+    @apply bg-black w-full flex justify-center;
+  }
+  .header-bar-container{
+    @apply p-1 container flex;
+  }
+  .header-bar-logo {
+    /* sm */
+    @apply w-[50px] self-center row-start-1 col-start-1 justify-self-center;
+    /* lg */
+    @apply lg:justify-self-start;
+  }
 }

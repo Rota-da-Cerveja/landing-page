@@ -4,12 +4,15 @@
 
 @layer components {
   .privacy-policy-wrapper{
-    @apply w-full flex justify-center;
+    @apply w-full flex items-center flex-col;
   }
   .privacy-policy-container{
-    @apply container flex flex-col gap-8 my-8;
+    @apply container grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8;
   }
   body{
     @apply bg-[#f4f4f4];
   }
+  .privacy-policy-title {
+    @apply text-3xl capitalize text-center py-10 tracking-wider font-black lg:text-4xl;
+}
 }

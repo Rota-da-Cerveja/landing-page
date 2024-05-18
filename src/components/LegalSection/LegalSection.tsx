@@ -12,7 +12,6 @@ export const LegalSection: React.FunctionComponent<LegalSection> = ({ title, con
 
   const [isExpanded, setExpanded] = useState(false);
 
-
   return <section className="legal-section-container">
     <h2 className="legal-section-title" onClick={() => setExpanded(s => !s)}>
       <Image src={arrow.src} alt="Arrow" width={32} height={32} className={`legal-section-title-arrow-icon ${isExpanded?"rotate-0":"rotate-180"}`}></Image>

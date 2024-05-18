@@ -2,17 +2,14 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { StoreButton } from "../button/store/Store";
 import { Social } from "../button/social/Social";
-import path from "path";
-import fs from 'fs';
 import './footer.css';
+
+import packageInfo from "../../../package.json";
 import { icon, image } from "../assets/assets";
 
 const inter = Inter({subsets: ["latin"]});
 
 export function Footer() {
-
-  // const packageJsonPath = path.join(process.cwd(), 'package.json');
-  // const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
 
   const currentYear = new Date().getFullYear();
 
@@ -46,7 +43,7 @@ export function Footer() {
           <a href="#">Termos de Uso</a>
           <a href="#">Cookies</a>
           <a href="#">Acessibilidade</a>
-          {/* <p>© {currentYear} {packageJson.org}</p> */}
+          <p>© {currentYear} {packageInfo.org}</p>
         </div>
       </div>
     </section>

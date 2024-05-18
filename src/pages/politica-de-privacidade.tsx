@@ -44,11 +44,13 @@ const politicadeprivacidade: React.FunctionComponent = () => {
     return <>
         <HeaderBar></HeaderBar>
         <main className="privacy-policy-wrapper">
+            <h1 className="privacy-policy-title">Política de Privacidade</h1>
             <div className="privacy-policy-container">
                 {legalSection.map(({ title, content }: LegalSection, index) =>
                     <LegalSection title={title} content={content} key={index}></LegalSection>
                 )}
             </div>
+            <h1 className="privacy-policy-title">Termos de uso</h1>
         </main>
         <Footer></Footer>
     </>;

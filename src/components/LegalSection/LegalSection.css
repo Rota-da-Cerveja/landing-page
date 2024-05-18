@@ -18,8 +18,9 @@
 }
 
 @layer components {
+
   .legal-section-container {
-    @apply w-full bg-white p-5 shadow-legal;
+    @apply w-full bg-white p-5 shadow-legal h-min;
   }
 
   .legal-section-title {
@@ -34,8 +35,7 @@
     @apply transition-all;
   }
 
-  .legal-section-description-hidden {
-    @apply animate-[scale-up-ver-top_0.4s_ease-in-out_both];
-
+  .legal-section-description {
+    @apply border-t border-t-[#f4f4f4];
   }
 }

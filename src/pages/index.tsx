@@ -6,10 +6,10 @@ import app from "../../public/device.webp";
 import beer from "../../public/beer_description.webp";
 import connection from "../../public/connection.webp";
 import { Breweries } from "@/components/breweries/breweries";
-import DefaultLayout from "../components/layout/layout";
 
 import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import axios from "axios";
+import { BeerContainer } from "@/components/beer/beerContainer";
 
 const paragraphs: Paragraph[] = [{
   text: "Descubra cervejas artesanais únicas e embarque numa viagem de sabores. De IPAs marcantes a pilsens leves, nossa seleção promete uma experiência sensorial inesquecível.",
@@ -46,13 +46,14 @@ export const getStaticProps = (async (context) => {
 
 export default function Home({ breweries }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <DefaultLayout>
+    <>
       <Header></Header>
       <BreweryCarousel title="Cervejarias parceiras">
         <Breweries names={breweries.breweries || []}></Breweries>
       </BreweryCarousel>
       <About paragraphs={paragraphs}></About>
+      <BeerContainer></BeerContainer>
       <Footer></Footer>
-    </DefaultLayout>
+    </>
   );
 }

@@ -38,6 +38,10 @@ body {
     transition: all .3s;
   }
 
+  h1{
+    @apply text-3xl capitalize text-center py-10 tracking-wider font-black text-white lg:text-4xl;
+  }
+
   h2{
     font-size: 2.375rem;
     font-family: "Inter", sans-serif;

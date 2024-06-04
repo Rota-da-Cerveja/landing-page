@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .beer-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 330px;
+  @apply bg-black;
+}
+.beer-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.beer-description {
+  @apply text-gray;
+}
+.beer-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 1rem;
+}}

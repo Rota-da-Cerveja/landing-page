@@ -13,7 +13,7 @@ type PropType = {
 }
 
 const sanitize: (txt: string) => string = (txt: string) => {
-    return txt.toLowerCase().replaceAll(" ", "-");
+    return txt.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replaceAll(" ", "-");
 }
 
 export const Carousel: React.FunctionComponent<PropType> = (props: PropType) => {
@@ -29,7 +29,7 @@ export const Carousel: React.FunctionComponent<PropType> = (props: PropType) => 
                         <div className="carousel-slide" key={index}>
                             <Link href={`/breweries/${src}`}>
                                 <div className="carousel-slide-picture">
-                                    <img src={`/api/image?name=${src}&type=breweries`} />
+                                    <img src={`/api/image?name=${src}&type=breweries&color=monochrome`} />
                                 </div>
                             </Link>
                         </div>

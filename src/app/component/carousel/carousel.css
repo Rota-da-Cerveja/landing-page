@@ -26,6 +26,11 @@
         flex: 0 0 var(--slide-size);
         min-width: 0;
         padding-left: var(--slide-spacing);
+        opacity: 0.5;
+        transition: all 0.5 ease-in-out;
+      }
+      .carousel-slide:hover{
+        opacity: 1;
       }
       .carousel-slide-picture {
         display: flex;

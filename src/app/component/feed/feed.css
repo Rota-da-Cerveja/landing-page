@@ -11,6 +11,6 @@
     @apply container mx-auto max-h-[50vh] my-10 overflow-y-auto;
   }
   .feed-viewport{
-    @apply w-full;
+    @apply w-full flex flex-col-reverse;
   }
 }

@@ -6,14 +6,11 @@ import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import "./carousel.css";
 import Link from 'next/link';
+import { sanitize } from '@/app/component/util/sanitize';
 
 type PropType = {
     slides: string[]
     options?: EmblaOptionsType
-}
-
-const sanitize: (txt: string) => string = (txt: string) => {
-    return txt.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replaceAll(" ", "-");
 }
 
 export const Carousel: React.FunctionComponent<PropType> = (props: PropType) => {

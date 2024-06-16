@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .brewery-container{
+    @apply container mx-auto min-h-screen;
+  }
+  .brewery-background{
+    @apply object-contain opacity-5;
+  }
+  .brewery-background-container{
+    @apply fixed w-screen h-screen flex items-center justify-center top-0 aspect-logo left-0 -z-50;
+  }
+  .brewery-paragraphic{
+    @apply indent-10 text-xl text-justify p-10;
+  }
+  .title{
+    @apply flex justify-between bg-white px-0 py-0 relative;
+  }
+  .brewery-social-container{
+    @apply flex gap-2 items-center;
+  }
+  .title-container{
+    @apply flex items-center flex-1;
+  }
+  .title-container-and-social{
+    @apply flex flex-col gap-2 lg:flex-row justify-normal lg:justify-between flex-1 lg:pr-10;
+  }
+}

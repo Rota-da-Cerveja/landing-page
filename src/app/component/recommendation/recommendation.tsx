@@ -15,12 +15,16 @@ const beer: BeerProps[] = [
   }
 ];
 
-export const Recommendation: React.FunctionComponent = () => {
+type RecommendationProps = {
+  beers: {name: string, description: string}[]
+}
+
+export const Recommendation: React.FunctionComponent<RecommendationProps> = ({beers}: RecommendationProps) => {
   return <>
     <div className="recommendation-wrapper">
       <h1 className='title text-white bg-transparent capitalize text-center'>Recomendações do dia</h1>
       <div className="flex gap-10 overflow-x-auto">
-        {beer.map((b, i) => <BeerCard {...b} key={i}></BeerCard>)}
+        {beers.map((b, i) => <BeerCard {...b} key={i}></BeerCard>)}
       </div>
     </div>
   </>

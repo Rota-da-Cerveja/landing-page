@@ -11,6 +11,7 @@ const OPTIONS: EmblaOptionsType = { dragFree: true, loop: true };
 
 type Content = {
   breweries: string[];
+  beers: {name: string, description: string}[]
 };
 
 export default async function Home() {
@@ -19,12 +20,14 @@ export default async function Home() {
 
   const content: Content = contentResponse.data;
 
+  console.log(content)
+
   return (<>
     <Header></Header>
     <Carousel slides={content.breweries} options={OPTIONS}></Carousel>
     <div className="flex">
       <Feed></Feed>
-      <Recommendation></Recommendation>
+      <Recommendation beers={content.beers}></Recommendation>
     </div>
   </>
   );

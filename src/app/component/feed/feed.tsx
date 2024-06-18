@@ -10,7 +10,7 @@ export const Feed: React.FunctionComponent = () => {
   const [publications, setPublications] = useState<Publication[]>([]);
 
   useEffect(() => {
-    const eventSource = new EventSource("http://localhost:8080/publication");
+    const eventSource = new EventSource(`http://localhost:8080/publication`);
     eventSource.onmessage = (event) => {
       console.log(JSON.parse(event.data))
       setPublications( queue => {
@@ -21,7 +21,7 @@ export const Feed: React.FunctionComponent = () => {
         return newQueue;
       })
     }
-
+    window.addEventListener("beforeunload", () => eventSource.close())
     return () => eventSource.close();
   }, []);
 

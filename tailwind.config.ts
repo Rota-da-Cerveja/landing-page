@@ -47,6 +47,8 @@ const config: Config = {
         'glass': '740 / 1600',
         'logo': '5 / 3',
         'banner': '64 / 25',
+        'beer': '382 / 626',
+        'mini-glass': '66 / 116',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

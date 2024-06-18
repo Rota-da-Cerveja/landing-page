@@ -9,7 +9,7 @@
     box-shadow: 0 2px 4px rgba(87, 78, 78, 0.1);
     min-width: 320px;
     max-width: 320px;
-    @apply block bg-black w-full hover:scale-110 transition-all;
+    @apply block bg-black w-full transition-all;
   }
 
   .beer-name {
